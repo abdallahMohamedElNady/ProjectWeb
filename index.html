@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="min-vh-100 py-4 bg-warning-subtle">
+        <div class="container">
+            <div>
+                <h1 class="mx-auto">Bookmarker</h1>
+            </div>
+            <div class="bookmark-body mt-4 mb-3 px-1 py-3">
+                <h2 class="text-center"><i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites<i
+                        class="fa-solid fa-bookmark"></i></h2>
+                <label for="siteName" class="mb-1 mt-3"><i class="fa-solid fa-book me-2"></i>Site Name</label>
+                <input type="text" placeholder="Bookmark Name" id="siteName" class="form-control mb-3"
+                    oninput="validation('siteName')" />
+                <label for="siteUrl" class="mb-1"><i class="fa-solid fa-link me-2"></i>Site URL</label>
+                <input type="email" placeholder="Website URL" id="siteUrl" class="form-control mb-3"
+                    oninput="validation('siteUrl')" />
+                <div class="text-center">
+                    <button class="btn btn-brown px-5" id="subtn" onclick="addWebsite()">Submit</button>
+                    <button class="btn btn-primary px-5 d-none" id="upbtn" onclick="updateWebsite()">Update</button>
+                </div>
+                <label for="search" class="mb-1"><i class="fa-solid fa-magnifying-glass me-2"></i>Search</label>
+                <input type="email" placeholder="Search By Name" id="search" class="form-control"
+                    oninput="searchName()" />
+            </div>
+            <table class="bg-white w-100 text-center">
+                <thead>
+                    <tr>
+                        <th>index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
